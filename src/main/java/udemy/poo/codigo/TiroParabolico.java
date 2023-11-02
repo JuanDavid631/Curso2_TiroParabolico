@@ -28,11 +28,11 @@ public class TiroParabolico {
     public Componentes[] calculoComponentes (int time) {
       int elementos = (int) (time / 0.1);
       Componentes[] valores = new Componentes[elementos + 1];
-      int indice = 0, ayuda = 0;
+      int indice = 0;
       float x = 0.0f, y = 0.0f;
-      for (ayuda = 0; ayuda < time ; ayuda += 0.1){
+      for (float ayuda = 0; ayuda < time ; ayuda += 0.1){
         x = (float) (velocidadInicial * Math.cos(Math.toRadians(grado)) * ayuda);
-        y = (float) ((velocidadInicial * Math.sin(Math.toRadians(grado)) * ayuda) + 0.5 * -gravedad * Math.pow(ayuda, 2));
+        y = (float) (velocidadInicial * Math.sin(Math.toRadians(grado) * ayuda) + 0.5 * -gravedad * Math.pow(ayuda, 2));
         Componentes obj = new Componentes(ayuda, x, y);
         valores[indice] = obj;
         indice++;
