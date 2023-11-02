@@ -22,7 +22,7 @@ public class Inicio {
     String y = null;
     Componentes [] datos = objetoUno.calculoComponentes(numTres);
     for (Componentes objeto : datos) {
-      y += objeto.getTiempo() + " ; " + objeto.getX() + " ; " + objeto.getY() + " ;";
+      y += objeto.getTiempo() + " ; " + objeto.getX() + " ; " + objeto.getY() + "\n";
     }
     JOptionPane.showMessageDialog(null, y, "Componentes", JOptionPane.INFORMATION_MESSAGE);
   }
