@@ -14,5 +14,9 @@ public class Inicio {
     TiroParabolico objetoUno = new TiroParabolico(numUno, numDos);
     JOptionPane.showMessageDialog(null, "La altura maxima es: " + objetoUno.alturaMaxima() + "\nEl alcance es: " +
         objetoUno.alcance(), "Resultado", JOptionPane.INFORMATION_MESSAGE);
+
+    String datoTres = JOptionPane.showInputDialog(null, "Dame el tiempo: ");
+    int numTres = Integer.parseInt(datoTres);
+
   }
 }
